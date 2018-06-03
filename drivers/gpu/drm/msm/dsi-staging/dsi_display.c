@@ -40,6 +40,9 @@
 #include "../sde/sde_trace.h"
 #include "dsi_parser.h"
 
+int backlight_min = 0;
+module_param(backlight_min, int, 0644);
+
 #define to_dsi_display(x) container_of(x, struct dsi_display, host)
 #define INT_BASE_10 10
 #define NO_OVERRIDE -1
@@ -320,6 +323,9 @@ if (strcmp(dsi_display->panel->name, "samsung s6e3fc2x01 cmd mode dsi panel") ==
 
 	bl_scale_ad = panel->bl_config.bl_scale_ad;
 	bl_temp = (u32)bl_temp * bl_scale_ad / MAX_AD_BL_SCALE_LEVEL;
+
+	if (bl_temp != 0 && bl_temp < backlight_min)
+		bl_temp = backlight_min;
 
 	pr_debug("bl_scale = %u, bl_scale_ad = %u, bl_lvl = %u\n",
 		bl_scale, bl_scale_ad, (u32)bl_temp);
