@@ -14,6 +14,7 @@
 #include <linux/slab.h>
 #include <trace/events/power.h>
 #include <linux/sched/sysctl.h>
+#include <uapi/linux/sched/types.h>
 #include "sched.h"
 #include "tune.h"
 /* Stub out fast switch routines present on mainline to reduce the backport
