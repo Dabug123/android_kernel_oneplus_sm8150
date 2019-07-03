@@ -1325,3 +1325,4 @@ int icnss_send_wlan_disable_to_fw(struct icnss_priv *priv)
 }
 
 
+

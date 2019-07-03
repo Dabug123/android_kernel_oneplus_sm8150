@@ -2136,6 +2136,7 @@ int icnss_trigger_recovery(struct device *dev)
 	if (test_bit(ICNSS_PD_RESTART, &priv->state)) {
 		icnss_pr_err("PD recovery already in progress: state: 0x%lx\n",
 			     priv->state);
+		ret = -EPERM;
 		goto out;
 	}
 
@@ -3514,3 +3515,4 @@ module_exit(icnss_exit);
 
 MODULE_LICENSE("GPL v2");
 MODULE_DESCRIPTION(DEVICE "iCNSS CORE platform driver");
+
