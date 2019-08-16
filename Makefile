@@ -413,7 +413,7 @@ CC		= $(REAL_CC)
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
-KBUILD_CFLAGS += -mcpu=kryo -stune=ckryo -mtune=kryo -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize -ftree-slp-vectorize -fvect-cost-model -fgcse-after-reload -fgcse-sm -ffast-math -fsingle-precision-constant -fvectorize -fslp-vectorize -Wno-ignored-optimization-argument -funsafe-math-optimizations \
+KBUILD_CFLAGS += -mcpu=kryo -stune=ckryo -mtune=kryo -fmodulo-sched -fmodulo-sched-allow-regmoves -ftree-vectorize -ftree-slp-vectorize -fvect-cost-model -fgcse-after-reload -fgcse-sm -ffast-math -fsingle-precision-constant -fvectorize -fslp-vectorize -Wno-ignored-optimization-argument -funsafe-math-optimizations -pipe \
 -fasynchronous-unwind-tables -fno-signed-zeros -fno-trapping-math -frename-registers -funroll-loops $(POLLY_FLAGS
 NOSTDINC_FLAGS  =
 CFLAGS_MODULE   =
