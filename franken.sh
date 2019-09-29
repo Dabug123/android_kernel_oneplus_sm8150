@@ -21,7 +21,7 @@ export LD_LIBRARY_PATH=${HOME}/android/clangop/clang-r353983c/lib64:$LD_LIBRARY_
 DEFCONFIG="franken_defconfig"
 
 # Kernel Details
-VER=".q1.3"
+VER=".q1.6"
 
 # Paths
 KERNEL_DIR=`pwd`
@@ -50,7 +50,7 @@ function make_dtb {
 }
 
 function make_boot {
-		cp -vr ~/android/op7q/out/arch/arm64/boot/Image-dtb ~/android/AnyKernel3/Image-dtb
+		cp -vr ~/android/op7q/out/arch/arm64/boot/Image.gz-dtb ~/android/AnyKernel3/Image.gz-dtb
 }
 
 
