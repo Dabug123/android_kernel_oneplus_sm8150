@@ -21,13 +21,13 @@ export LD_LIBRARY_PATH=${HOME}/android/clangop/clang-r353983c/lib64:$LD_LIBRARY_
 DEFCONFIG="franken_defconfig"
 
 # Kernel Details
-VER=".q2.4"
+VER=".q4"
 
 # Paths
 KERNEL_DIR=`pwd`
 REPACK_DIR="${HOME}/android/AnyKernel3"
 PATCH_DIR="${HOME}/android/AnyKernel3/patch"
-ZIP_MOVE="${HOME}/android"
+ZIP_MOVE="${HOME}/android/op7q/release"
 ZIMAGE_DIR="${HOME}/android/op7q/out/arch/arm64/boot/"
 
 # Functions
