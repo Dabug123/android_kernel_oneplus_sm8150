@@ -21,7 +21,7 @@ export LD_LIBRARY_PATH=${HOME}/android/clangop/clang-r353983c/lib64:$LD_LIBRARY_
 DEFCONFIG="franken_defconfig"
 
 # Kernel Details
-VER=".q5.2"
+VER=".q5.3"
 
 # Paths
 KERNEL_DIR=`pwd`
